@@ -111,7 +111,7 @@ def main():
     
     print("\nFinding long messages (slow method)...")
     long_msgs = find_long_messages_slow(data, 100)
-    print(f"Found {len(long_msgs.split(chr(10)))-1} long messages")
+    print(f"Found {len([m for m in long_msgs.split('\n') if m])} long messages")
     
     print("\nCalculating statistics (slow method)...")
     stats = calculate_statistics_slow(data)

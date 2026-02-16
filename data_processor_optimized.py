@@ -105,7 +105,7 @@ def main():
     
     print("\nFinding long messages (fast method)...")
     long_msgs = find_long_messages_fast(data, 100)
-    print(f"Found {len(long_msgs.split(chr(10)))} long messages")
+    print(f"Found {len([m for m in long_msgs.split('\n') if m])} long messages")
     
     print("\nCalculating statistics (fast method)...")
     stats = calculate_statistics_fast(data)
